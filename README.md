@@ -45,7 +45,9 @@ Antes de começar, certifique-se de ter instalado:
 
 ### Frontend
 - **fisiohub-react:** Aplicação web desenvolvida em React.js
+  Execute fora do microserviços. 
 - **fisiohub-react-native:** Aplicação mobile desenvolvida em React Native
+  Execute fora do microserviços. 
 
 ---
 
@@ -92,37 +94,18 @@ cd fisiohub
 
 ### 4. Acesse as Aplicações
 - API Gateway: `http://localhost:3000`
-- Aplicação Web (React): `http://localhost:3007`
-
-### 5. Teste a Instalação
-1. Acesse `http://localhost:3007` no navegador
-2. Você deve ver a tela de login da aplicação
-3. Se encontrar algum erro, verifique os logs:
-   ```bash
-   docker-compose logs -f
-   ```
 
 ### **Solução de Problemas Comuns**
 
-1. **Erro de Porta em Uso**
-   - Verifique se as portas 3000, 3001-3008 não estão em uso
-   - Para verificar portas em uso (Windows):
-     ```bash
-     netstat -ano | findstr :3000
-     ```
-   - Para verificar portas em uso (Linux/Mac):
-     ```bash
-     lsof -i :3000
-     ```
 
-2. **Erro de Conexão com o MySQL**
+1. **Erro de Conexão com o MySQL**
    - Aguarde alguns minutos após iniciar os serviços
    - Verifique os logs do MySQL:
      ```bash
      docker-compose logs mysql
      ```
 
-3. **Erro de Build**
+2. **Erro de Build**
    - Limpe os containers e imagens:
      ```bash
      docker-compose down
