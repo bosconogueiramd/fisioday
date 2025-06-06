@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   mysql:
     image: mysql:8.0
@@ -121,14 +120,5 @@ services:
     depends_on:
       - mysql
 
-  fisiohub-react:
-    build: ./fisiohub-react
-    ports:
-      - "3007:3007"
-    environment:
-      - REACT_APP_API_URL=http://localhost:3000
-    depends_on:
-      - api-gateway
-  
 volumes:
   db_data:

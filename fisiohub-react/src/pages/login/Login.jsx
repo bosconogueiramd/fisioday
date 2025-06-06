@@ -44,14 +44,14 @@ export default function Login() {
     }
 
     setLoading(true);
-    setErrors({}); // Clear previous errors
+    setErrors({}); 
 
     try {
       const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': 'GP25apiKEYADS2k25' // Incluindo a chave de API
+          'x-api-key': 'GP25apiKEYADS2k25'
         },
         body: JSON.stringify({
           email: formData.email,
