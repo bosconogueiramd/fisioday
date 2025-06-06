@@ -44,10 +44,19 @@ Antes de começar, certifique-se de ter instalado:
 - **MySQL:** Banco de dados relacional, com volume persistente.
 
 ### Frontend
-- **fisiohub-react:** Aplicação web desenvolvida em React.js
-  Execute fora do microserviços. 
-- **fisiohub-react-native:** Aplicação mobile desenvolvida em React Native
-  Execute fora do microserviços. 
+- **fisiohub-react:** Aplicação web desenvolvida em React.js, para executar, basta acessar a pasta fisiohub-react, use os seguintes comandos:
+```bash
+nom install
+npm run dev
+```
+- **fisiohub-react-native:** Aplicação mobile desenvolvida em React Native. É uma aplicação que precisa ter o Android Studio instalado com todas parametrização feita de ambiente de desenvolmento para ser testada, e executada fora do ambiente dos containers.
+
+```bash
+nom install
+npx react-native run-android
+```
+
+  
 
 ---
 
@@ -55,7 +64,7 @@ Antes de começar, certifique-se de ter instalado:
 
 ### 1. Clone o Repositório
 ```bash
-git clone https://github.com/seu-usuario/fisiohub.git
+git clone https://github.com/bosconogueiramd/fisioday.git
 cd fisiohub
 ```
 
