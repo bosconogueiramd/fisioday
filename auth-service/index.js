@@ -18,29 +18,6 @@ const pool = mysql.createPool({
 // Verificando se o micro serviço Auth está online
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
-// // Função seed que insere um usuário admin padrão (exemplo)
-// async function seedUsuarios() {
-//   try {
-//     // Verifica se o usuário admin já existe para evitar duplicação
-//     const [rows] = await pool.query('SELECT * FROM F_USUARIO WHERE USUARIO_EMAIL = ?', ['admin@exemplo.com']);
-//     if (rows.length === 0) {
-//       const senhaHash = await bcrypt.hash('admin123', 10);
-//       await pool.query(
-//         `INSERT INTO F_USUARIO 
-//           (USUARIO_NOME, USUARIO_EMAIL, USUARIO_SENHA, USUARIO_CIRURGIA, USUARIO_CPF, USUARIO_GENERO, USUARIO_DATA_CRIACAO, F_USUARIO_ID_USUARIO_PERFIL) 
-//           VALUES (?, ?, ?, ?, ?, ?, NOW(), ?)`,
-//         ['Admin', 'admin@exemplo.com', senhaHash, 'N/A', '00000000000', 'Outro', 1]
-//       );
-//       console.log('Usuário admin criado pelo seed.');
-//     } else {
-//       console.log('Usuário admin já existe. Seed não criou novo.');
-//     }
-//   } catch (error) {
-//     console.error('Erro no seed de usuários:', error);
-//   }
-// }
-
-seedUsuarios();
 
 // Cadastro de usuário
 app.post('/auth/register', async (req, res) => {
